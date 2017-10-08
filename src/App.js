@@ -13,17 +13,21 @@ class App extends Component {
               <section>
                   <div className="input-wrapper">
                       <input type="text" name="name" placeholder="Имя" required/>
+                      <div className="error-block">d</div>
                   </div>
                   <div className="input-wrapper">
                       <label for="email">Email</label>
                       <input type="email" id="email" name="email" placeholder="Электронная почта" required/>
+                      <div className="error-block">2</div>
                   </div>
-                  <div className="input-wrapper">
+                  <div className="input-wrapper with-error">
                       <label for="date">Дата рождения</label>
                       <input type="date" id="date" name="date" placeholder="Дата рождения" required/>
+                      <div className="error-block">d</div>
                   </div>
                   <div className="textarea-wrapper">
                       <textarea name="message" placeholder="Сообщение" rows="1" required/>
+                      <div className="error-block">d</div>
                   </div>
               </section>
               <section className="button-wrapper">

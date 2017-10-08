@@ -41,6 +41,7 @@ form label {
   color: #8E8E8E;
 }
 form .input-wrapper {
+  position: relative;
   display: inline-block;
   width: 33.3%;
   margin-bottom: 30px;
@@ -50,7 +51,11 @@ form .input-wrapper:last-child {
   padding-right: 0;
 }
 form .textarea-wrapper {
+  position: relative;
   margin-bottom: 30px;
+}
+form .with-error {
+  border-bottom: 1px solid #ff4141;
 }
 form input {
   width: 100%;
@@ -74,6 +79,12 @@ form textarea {
 form textarea:focus {
   border-bottom: 1px solid #4185f4;
   outline: none;
+}
+form .error-block {
+  position: absolute;
+  margin-top: 10px;
+  color: #ff4141;
+  font-size: 10px;
 }
 form .button-wrapper {
   text-align: center;
