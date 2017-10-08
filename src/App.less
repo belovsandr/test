@@ -1,31 +1,131 @@
-.App {
-  text-align: center;
+@font-face {
+  font-family: 'proba_pro';
+  src: url('./fonts/proba_pro_regular-webfont.eot');
+  font-weight: normal;
+  font-style: normal;
 }
 
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
-}
-
-.App-title {
-  font-size: 1.5em;
-}
-
-.App-intro {
-  font-size: large;
-}
 body {
-  background-color: blue;
+  background-color: #e9e9e9;
+  * {
+    box-sizing: border-box;
+    font-family: 'proba_pro', sans-serif;
+  }
 }
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+
+.App {
+  position: relative;
+  height: 100vh;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 630px;
+  padding: 35px 40px 50px;
+  background-color: #FFFFFF;
+  font-size: 0;
+  h1 {
+    margin-bottom: 0;
+    font-size: 26px;
+    color: #333333;
+  }
+  p {
+    max-width: 227px;
+    margin-top: 0;
+    font-size: 13px;
+    color: #8E8E8E;
+  }
+  label {
+    font-size: 12px;
+    color: #8E8E8E;
+  }
+  .input-wrapper {
+    display: inline-block;
+    width: 33.3%;
+    margin-bottom: 30px;
+    padding-right: 20px;
+    &:last-child {
+      padding-right: 0;
+    }
+  }
+  .textarea-wrapper {
+    margin-bottom: 30px;
+  }
+  input {
+    width: 100%;
+    font-size: 18px;
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    color: #333333;
+    &:focus {
+      border-bottom: 1px solid #4185f4;
+      outline: none;
+    }
+  }
+  textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #e2e2e2;
+    font-size: 18px;
+    color: #333333;
+    resize: none;
+    &:focus {
+      border-bottom: 1px solid #4185f4;
+      outline: none;
+    }
+  }
+  .button-wrapper {
+    text-align: center;
+  }
+  button {
+    width: 215px;
+    margin-right: 20px;
+    padding: 15px 65px;
+    border: none;
+    border-radius: 2px;
+    box-shadow: none;
+    text-align: center;
+    &:last-child {
+      margin-right: 0;
+    }
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  #reset-button {
+    background-color: #E0E0E0;
+  }
+  #submit-button {
+    background-color: #4185F4;
+  }
+}
+
+@media only screen and (max-width : 767px) {
+  form {
+    min-width: initial;
+    padding: 35px 25px 20px;
+    h1, p {
+      text-align: center;
+    }
+    h1 {
+      margin-bottom: 10px;
+      line-height: 26px;
+    }
+    p {
+      max-width: 100%;
+    }
+    .input-wrapper {
+      display: block;
+      width: auto;
+      padding-right: 0;
+    }
+    button {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+
 }

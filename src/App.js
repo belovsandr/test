@@ -8,27 +8,27 @@ class App extends Component {
           <form>
               <header>
                   <h1>Отправить сообщение</h1>
-                  <p>Аноноимные сообщения рассматриваются</p>
+                  <p>Анонимные сообщения рассматриваются</p>
               </header>
               <section>
-                  <div>
-                      <input type="text" placeholder="Имя" required/>
+                  <div className="input-wrapper">
+                      <input type="text" name="name" placeholder="Имя" required/>
                   </div>
-                  <div>
-                      <label>Email</label>
-                      <input type="email" placeholder="Электронная почта" required/>
+                  <div className="input-wrapper">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Электронная почта" required/>
                   </div>
-                  <div>
-                      <label>Дата рождения</label>
-                      <input type="date" placeholder="Дата рождения" required/>
+                  <div className="input-wrapper">
+                      <label for="date">Дата рождения</label>
+                      <input type="date" id="date" name="date" placeholder="Дата рождения" required/>
                   </div>
-                  <div>
-                      <textarea required/>
+                  <div className="textarea-wrapper">
+                      <textarea name="message" placeholder="Сообщение" rows="1" required/>
                   </div>
               </section>
-              <section>
-                  <button type="reset">Очистить</button>
-                  <button>Отправить</button>
+              <section className="button-wrapper">
+                  <button id="reset-button" type="reset">Очистить</button>
+                  <button id="submit-button">Отправить</button>
               </section>
           </form>
       </div>
