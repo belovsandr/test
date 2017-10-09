@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'proba_pro';
-  src: url('./fonts/proba_pro_regular-webfont.eot');
+  src: url('/fonts/proba_pro_regular-webfont.eot');
   src:
-  url('./fonts/proba_pro_regular-webfont.woff2') format('woff2'),
-  url('./fonts/proba_pro_regular-webfont.woff') format('woff'),
-  url('./fonts/proba_pro_regular-webfont.ttf') format('truetype');
+  url('/fonts/proba_pro_regular-webfont.woff2') format('woff2'),
+  url('/fonts/proba_pro_regular-webfont.woff') format('woff'),
+  url('/fonts/proba_pro_regular-webfont.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -103,6 +103,7 @@ form {
     border-radius: 2px;
     box-shadow: none;
     text-align: center;
+    font-size: 16px;
     &:last-child {
       margin-right: 0;
     }
@@ -112,9 +113,18 @@ form {
   }
   #reset-button {
     background-color: #E0E0E0;
+    color: #262626;
   }
   #submit-button {
     background-color: #4185F4;
+    color: #fafafa;
+    &:hover {
+      background-color: #3874d7;
+    }
+    &:disabled {
+      background-color: #2076bb;
+      cursor: not-allowed;
+    }
   }
 }
 
